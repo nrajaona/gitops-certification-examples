@@ -4,7 +4,7 @@ COPY ./ ./
 
 RUN mvn clean package
 
-FROM openjdk:8-jre-alpine3.9
+FROM openjdk:23-ea-34-jdk-oraclelinux8
 
 COPY --from=MAVEN_BUILD /target/spring-boot-0.0.1-SNAPSHOT.jar /demo.jar
 
